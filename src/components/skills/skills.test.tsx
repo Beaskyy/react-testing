@@ -31,4 +31,18 @@ describe("test for list elements", () => {
     });
     expect(startLearningButton).not.toBeInTheDocument();
   });
+
+  test("eventualy renders the start learning button", async () => {
+    render(<Skills skills={skills} />);
+    const startLearningButton = await screen.findByRole(
+      "button",
+      {
+        name: "Start learning",
+      },
+      {
+        timeout: 5001,
+      }
+    );
+    expect(startLearningButton).toBeInTheDocument();
+  });
 });
