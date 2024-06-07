@@ -17,7 +17,7 @@ export const Application = () => {
           <input id="bio" name="bio" />
         </div>
         <input type="checkbox" /> I agree to the terms
-        <button>Submit</button>
+        <button disabled>Submit</button>
       </form>
     </>
   );
